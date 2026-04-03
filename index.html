@@ -2,56 +2,180 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Chikaarashi Rikito | iOS Apps</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1c1c1e; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f5f5f7; }
-        header { text-align: center; margin-bottom: 60px; }
-        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .card { background: white; padding: 32px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-5px); }
-        .app-category { color: #8e8e93; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
-        h2 { font-size: 22px; font-weight: 700; margin: 0 0 12px; color: #1d1d1f; }
-        p { color: #48484a; font-size: 15px; flex-grow: 1; margin-bottom: 24px; }
-        .links { border-top: 1px solid #f2f2f7; padding-top: 20px; display: flex; gap: 15px; align-items: center; }
-        .btn { text-decoration: none; font-size: 14px; font-weight: 600; color: #007AFF; }
-        .btn-store { color: #ffffff; background: #1c1c1e; padding: 8px 16px; border-radius: 20px; }
-        footer { margin-top: 80px; text-align: center; color: #8e8e93; font-size: 13px; border-top: 1px solid #e5e5ea; padding-top: 24px; }
+        :root {
+            --bg-color: #f2f2f7;
+            --card-bg: #ffffff;
+            --text-main: #1c1c1e;
+            --text-sub: #8e8e93;
+            --accent: #007AFF;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        header {
+            padding: 40px 20px 20px;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -0.5px; }
+        .sub-header { color: var(--text-sub); font-size: 15px; margin-top: 4px; }
+
+        .container {
+            padding: 10px 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* アプリカードのスタイル */
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .app-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            background: #e5e5ea;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 0.5px solid rgba(0,0,0,0.1);
+        }
+
+        .app-title-area {
+            flex: 1;
+        }
+
+        .app-title-area h2 {
+            font-size: 19px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .app-category {
+            color: var(--text-sub);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .app-description {
+            font-size: 14px;
+            color: #3a3a3c;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* ボタン類 */
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .btn:active { opacity: 0.7; }
+
+        .btn-main {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn-sub {
+            background-color: #f2f2f7;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-sub);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        footer a { color: var(--text-sub); text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Chikaarashi Rikito</h1>
-    <p>iOS Application Projects</p>
+    <p class="sub-header">iOS Application Projects</p>
 </header>
 
-<main class="grid">
-    <div class="card">
-        <div class="app-category">Utility</div>
-        <h2>App Stocker</h2>
-        <p>気になるアプリをスマートに管理。App Storeの価格変化をチェックするためのウィッシュリストアプリです。</p>
-        <div class="links">
-            <a href="https://apps.apple.com/jp/app/id6759819675" target="_blank" class="btn btn-store">App Store</a>
-            <a href="https://mlots-tokyo.github.io/app-stocker-docs/privacy.html" class="btn">Privacy Policy</a>
+<div class="container">
+    <section class="app-card">
+        <div class="app-header">
+            <img src="icon-stocker.png" alt="App Stocker Icon" class="app-icon" onerror="this.style.backgroundColor='#007AFF'">
+            <div class="app-title-area">
+                <h2>App Stocker</h2>
+                <div class="app-category">ユーティリティ</div>
+            </div>
         </div>
-    </div>
+        <p class="app-description">
+            気になるアプリをスマートに管理。App Storeの価格変化をチェックするためのウィッシュリストアプリです。
+        </p>
+        <div class="action-buttons">
+            <a href="https://apps.apple.com/jp/app/id6759819675" class="btn btn-main">App Store</a>
+            <a href="https://mlots-tokyo.github.io/app-stocker-docs/privacy.html" class="btn btn-sub">Privacy Policy</a>
+        </div>
+    </section>
 
-    <div class="card">
-        <div class="app-category">Productivity</div>
-        <h2>To Day Do</h2>
-        <p>「今日」に集中するタスク管理。シンプルな操作で、日々のやるべきことを確実にクリアしていくためのツールです。</p>
-        <div class="links">
-            <a href="https://apps.apple.com/jp/app/id6759670393" target="_blank" class="btn btn-store">App Store</a>
-            <a href="https://mlots-tokyo.github.io/to-day-do-docs/privacy.html" class="btn">Privacy Policy</a>
+    <section class="app-card">
+        <div class="app-header">
+            <img src="icon-todaydo.png" alt="To Day Do Icon" class="app-icon" onerror="this.style.backgroundColor='#34C759'">
+            <div class="app-title-area">
+                <h2>To Day Do</h2>
+                <div class="app-category">仕事効率化</div>
+            </div>
         </div>
-    </div>
-</main>
+        <p class="app-description">
+            「今日」に集中するタスク管理。シンプルな操作で、日々のやるべきことを確実にクリアしていくためのツールです。
+        </p>
+        <div class="action-buttons">
+            <a href="https://apps.apple.com/jp/app/id6759670393" class="btn btn-main">App Store</a>
+            <a href="https://mlots-tokyo.github.io/to-day-do-docs/privacy.html" class="btn btn-sub">Privacy Policy</a>
+        </div>
+    </section>
+</div>
 
 <footer>
-    <p>Support & Contact: <a href="mailto:mlots.tokyo@gmail.com" style="color:inherit;">mlots.tokyo@gmail.com</a></p>
-    <p>&copy; 2026 Chikaarashi Rikito (Mlots)</p>
+    <p>
+        Contact: <a href="mailto:mlots.tokyo@gmail.com">mlots.tokyo@gmail.com</a><br>
+        &copy; 2026 Chikaarashi Rikito (Mlots)
+    </p>
 </footer>
 
 </body>

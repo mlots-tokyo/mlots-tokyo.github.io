@@ -30,17 +30,16 @@
         .sub-header { color: var(--text-sub); font-size: 15px; margin-top: 4px; }
 
         .container {
-            padding: 10px 15px;
+            padding: 10px 15px 0; /* 下のパディングを0に */
             max-width: 500px;
             margin: 0 auto;
         }
 
-        /* アプリカードのスタイル */
         .app-card {
             background: var(--card-bg);
             border-radius: 20px;
             padding: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* 20pxから10pxに短縮 */
             display: flex;
             flex-direction: column;
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
@@ -86,7 +85,6 @@
             line-height: 1.5;
         }
 
-        /* ボタン類 */
         .action-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -119,10 +117,10 @@
 
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 15px 20px 40px; /* 上部余白を40pxから15pxに短縮 */
             color: var(--text-sub);
             font-size: 12px;
-            line-height: 1.8;
+            line-height: 1.4; /* 行間を1.8から1.4にタイト化 */
         }
 
         footer a { color: var(--text-sub); text-decoration: underline; }
@@ -148,7 +146,7 @@
             気になるアプリをスマートに管理。App Storeの価格変化をチェックするためのウィッシュリストアプリです。
         </p>
         <div class="action-buttons">
-            <a href="https://apps.apple.com/jp/app/id6759819675" class="btn btn-main">App Store</a>
+            <a href="https://apps.apple.com/jp/app/id6759819675" target="_blank" class="btn btn-main">App Store</a>
             <a href="https://mlots-tokyo.github.io/app-stocker-docs/privacy.html" class="btn btn-sub">Privacy Policy</a>
         </div>
     </section>
@@ -165,7 +163,7 @@
             「今日」に集中するタスク管理。シンプルな操作で、日々のやるべきことを確実にクリアしていくためのツールです。
         </p>
         <div class="action-buttons">
-            <a href="https://apps.apple.com/jp/app/id6759670393" class="btn btn-main">App Store</a>
+            <a href="https://apps.apple.com/jp/app/id6759670393" target="_blank" class="btn btn-main">App Store</a>
             <a href="https://mlots-tokyo.github.io/to-day-do-docs/privacy.html" class="btn btn-sub">Privacy Policy</a>
         </div>
     </section>

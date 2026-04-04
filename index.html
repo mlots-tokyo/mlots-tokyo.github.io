@@ -19,65 +19,50 @@
             margin: 0;
             padding: 0;
             -webkit-tap-highlight-color: transparent;
-            /* 縦スクロールを防止 */
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
         }
         header {
-            padding: 20px 20px 10px; /* 余白を大幅に短縮 */
+            padding: 20px 20px 8px;
             text-align: left;
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
-            width: 100%;
-            box-sizing: border-box;
         }
-        h1 { font-size: 24px; font-weight: 800; margin: 0; letter-spacing: -0.5px; }
-        .sub-header { color: var(--text-sub); font-size: 14px; margin-top: 2px; }
+        h1 { font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -0.5px; }
+        .sub-header { color: var(--text-sub); font-size: 13px; margin-top: 2px; }
 
         .container {
             padding: 0 15px;
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
-            flex: 1; /* 余ったスペースを埋める */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* カードを中央寄りに配置 */
-            gap: 8px; /* カード同士の間隔 */
         }
 
         .app-card {
             background: var(--card-bg);
-            border-radius: 20px;
-            padding: 15px; /* 20pxから15pxに短縮 */
+            border-radius: 18px;
+            padding: 14px;
+            margin-bottom: 10px;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .app-header {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .app-icon {
-            width: 60px; /* 72pxから60pxに縮小 */
-            height: 60px;
-            border-radius: 14px;
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
             background: #e5e5ea;
             object-fit: cover;
             margin-right: 12px;
             border: 0.5px solid rgba(0,0,0,0.1);
         }
 
-        .app-title-area {
-            flex: 1;
-        }
-
         .app-title-area h2 {
-            font-size: 17px; /* 19pxから17pxに縮小 */
+            font-size: 16px;
             font-weight: 700;
             margin: 0;
             line-height: 1.2;
@@ -85,15 +70,15 @@
 
         .app-category {
             color: var(--text-sub);
-            font-size: 12px;
+            font-size: 11px;
             margin-top: 2px;
         }
 
         .app-description {
-            font-size: 13px; /* 14pxから13pxに縮小 */
+            font-size: 12.5px;
             color: #3a3a3c;
-            margin-bottom: 12px;
-            line-height: 1.4;
+            margin-bottom: 10px;
+            line-height: 1.35;
         }
 
         .action-buttons {
@@ -106,32 +91,23 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 40px; /* 44pxから40pxに短縮 */
+            height: 38px;
             border-radius: 10px;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
             transition: opacity 0.2s;
         }
 
         .btn:active { opacity: 0.7; }
-
-        .btn-main {
-            background-color: var(--accent);
-            color: #ffffff;
-        }
-
-        .btn-sub {
-            background-color: #f2f2f7;
-            color: var(--accent);
-        }
+        .btn-main { background-color: var(--accent); color: #ffffff; }
+        .btn-sub { background-color: #f2f2f7; color: var(--accent); }
 
         footer {
             text-align: center;
-            padding: 10px 20px 20px; /* 下部のパディングを最小限に */
+            padding: 10px 20px 20px;
             color: var(--text-sub);
-            font-size: 11px;
-            line-height: 1.3;
+            font-size: 10.5px;
         }
 
         footer a { color: var(--text-sub); text-decoration: underline; }
@@ -147,7 +123,7 @@
 <div class="container">
     <section class="app-card">
         <div class="app-header">
-            <img src="icon-stocker.png" alt="App Stocker Icon" class="app-icon" onerror="this.style.backgroundColor='#007AFF'">
+            <img src="icon-stocker.png" alt="App Stocker" class="app-icon" onerror="this.style.backgroundColor='#007AFF'">
             <div class="app-title-area">
                 <h2>App Stocker</h2>
                 <div class="app-category">ユーティリティ</div>
@@ -164,14 +140,14 @@
 
     <section class="app-card">
         <div class="app-header">
-            <img src="icon-todaydo.png" alt="To Day Do Icon" class="app-icon" onerror="this.style.backgroundColor='#34C759'">
+            <img src="icon-todaydo.png" alt="To Day Do" class="app-icon" onerror="this.style.backgroundColor='#34C759'">
             <div class="app-title-area">
                 <h2>To Day Do</h2>
                 <div class="app-category">仕事効率化</div>
             </div>
         </div>
         <p class="app-description">
-            「今日」に集中するタスク管理。シンプルな操作で、日々のやるべきことを確実にクリア。
+            「今日」に集中するタスク管理。シンプルな操作で、日々のタスクを確実にクリア。
         </p>
         <div class="action-buttons">
             <a href="https://apps.apple.com/jp/app/id6759670393" target="_blank" class="btn btn-main">App Store</a>
@@ -182,8 +158,7 @@
 
 <footer>
     <p>
-        Contact: <a href="mailto:mlots.tokyo@gmail.com">mlots.tokyo@gmail.com</a><br>
-        &copy; 2026 Chikaarashi Rikito (Mlots)
+        Contact: <a href="mailto:mlots.tokyo@gmail.com">mlots.tokyo@gmail.com</a> | &copy; 2026 Mlots
     </p>
 </footer>
 

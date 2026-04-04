@@ -21,25 +21,25 @@
             -webkit-tap-highlight-color: transparent;
         }
         header {
-            padding: 20px 20px 8px;
+            padding: 15px 20px 5px;
             text-align: left;
             max-width: 480px;
             margin: 0 auto;
         }
-        h1 { font-size: 22px; font-weight: 800; margin: 0; letter-spacing: -0.5px; }
-        .sub-header { color: var(--text-sub); font-size: 13px; margin-top: 2px; }
+        h1 { font-size: 20px; font-weight: 800; margin: 0; letter-spacing: -0.5px; }
+        .sub-header { color: var(--text-sub); font-size: 12px; margin-top: 2px; }
 
         .container {
-            padding: 0 15px;
+            padding: 0 12px;
             max-width: 480px;
             margin: 0 auto;
         }
 
         .app-card {
             background: var(--card-bg);
-            border-radius: 18px;
-            padding: 14px;
-            margin-bottom: 10px;
+            border-radius: 16px;
+            padding: 12px;
+            margin-bottom: 8px;
             display: flex;
             flex-direction: column;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -48,21 +48,21 @@
         .app-header {
             display: flex;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .app-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 12px;
+            width: 52px;
+            height: 52px;
+            border-radius: 11px;
             background: #e5e5ea;
             object-fit: cover;
-            margin-right: 12px;
+            margin-right: 10px;
             border: 0.5px solid rgba(0,0,0,0.1);
         }
 
         .app-title-area h2 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             margin: 0;
             line-height: 1.2;
@@ -70,31 +70,31 @@
 
         .app-category {
             color: var(--text-sub);
-            font-size: 11px;
-            margin-top: 2px;
+            font-size: 10px;
+            margin-top: 1px;
         }
 
         .app-description {
-            font-size: 12.5px;
+            font-size: 11.5px;
             color: #3a3a3c;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             line-height: 1.35;
         }
 
         .action-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 6px;
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 38px;
-            border-radius: 10px;
+            height: 36px;
+            border-radius: 8px;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             transition: opacity 0.2s;
         }
@@ -105,11 +105,12 @@
 
         footer {
             text-align: center;
-            padding: 10px 20px 20px;
+            padding: 8px 20px 15px;
             color: var(--text-sub);
-            font-size: 10.5px;
+            font-size: 10px;
         }
 
+        footer p { margin: 0; line-height: 1.4; }
         footer a { color: var(--text-sub); text-decoration: underline; }
     </style>
 </head>
@@ -130,11 +131,11 @@
             </div>
         </div>
         <p class="app-description">
-            気になるアプリをスマートに管理。App Storeの価格変化をチェックするためのウィッシュリスト。
+            アプリ専用の「欲しいものリスト」です。App Storeのリンクを貼るだけで価格変動を検知。値下げされた有料アプリを通知でお知らせします。
         </p>
         <div class="action-buttons">
             <a href="https://apps.apple.com/jp/app/id6759819675" target="_blank" class="btn btn-main">App Store</a>
-            <a href="https://mlots-tokyo.github.io/app-stocker-docs/privacy.html" class="btn btn-sub">Privacy</a>
+            <a href="https://mlots-tokyo.github.io/app-stocker-docs/privacy.html" class="btn btn-sub">Privacy Policy</a>
         </div>
     </section>
 
@@ -147,18 +148,19 @@
             </div>
         </div>
         <p class="app-description">
-            「今日」に集中するタスク管理。シンプルな操作で、日々のタスクを確実にクリア。
+            「毎日ゼロから始める」ToDoリスト。毎日決まった時間にタスクが自動消去。昨日までのやり残しに縛られず、最高の「今日」をデザイン。
         </p>
         <div class="action-buttons">
             <a href="https://apps.apple.com/jp/app/id6759670393" target="_blank" class="btn btn-main">App Store</a>
-            <a href="https://mlots-tokyo.github.io/to-day-do-docs/privacy.html" class="btn btn-sub">Privacy</a>
+            <a href="https://mlots-tokyo.github.io/to-day-do-docs/privacy.html" class="btn btn-sub">Privacy Policy</a>
         </div>
     </section>
 </div>
 
 <footer>
     <p>
-        Contact: <a href="mailto:mlots.tokyo@gmail.com">mlots.tokyo@gmail.com</a> | &copy; 2026 Mlots
+        Contact: <a href="mailto:mlots.tokyo@gmail.com">mlots.tokyo@gmail.com</a><br>
+        &copy; 2026 Chikaarashi Rikito (Mlots)
     </p>
 </footer>
 

@@ -47,7 +47,7 @@
   --dots:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22'%3E%3Ccircle cx='2' cy='2' r='1.2' fill='%23262520'/%3E%3C/svg%3E");
 }}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg) var(--dots);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,"Segoe UI",Roboto,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
 a{color:inherit}
 ul,ol{list-style:none;margin:0;padding:0}
@@ -57,8 +57,8 @@ ul,ol{list-style:none;margin:0;padding:0}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:10px}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:50;padding:14px 0 0}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
 .brand{display:block;line-height:0}
 .logo{height:22px;width:auto;display:block}
 .logo .letters{fill:var(--ink)}
@@ -112,8 +112,8 @@ section{padding-top:104px}
 /* works */
 .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
 .tile{grid-column:span 6;display:flex;flex-direction:column;gap:20px;padding:14px 14px 26px;border-radius:30px;background:var(--card);border:1px solid var(--line);transition:transform .4s var(--ease),box-shadow .4s}
-@media (min-width:640px){.tile{grid-column:span 3}.tile:last-child{grid-column:span 6}}
-@media (min-width:980px){.tile.span-2,.tile.span-2:last-child{grid-column:span 2}.tile.span-4{grid-column:span 4}}
+@media (min-width:640px){.tile{grid-column:span 3}}
+@media (min-width:980px){.tile{grid-column:span 2}}
 @media (hover:hover){.tile:hover{transform:translateY(-4px);box-shadow:0 26px 50px -28px rgba(18,18,18,.35)}}
 .panel{display:flex;align-items:center;justify-content:center;min-height:176px;border-radius:20px;background:var(--tint)}
 @media (prefers-color-scheme:dark){.panel{background:var(--panel)}}
@@ -131,16 +131,16 @@ section{padding-top:104px}
 .tb-main{background:var(--ink);color:var(--bg)}
 .tb-sub{background:transparent;color:var(--ink);border:1px solid var(--line)}
 @media (hover:hover){.tbtn:hover{transform:translateY(-2px)}.tb-sub:hover{border-color:var(--ink)}}
-@media (min-width:980px){
-  .tile.span-4{display:grid;grid-template-columns:240px 1fr;gap:12px;padding:14px 26px 14px 14px}
-  .tile.span-4 .panel{min-height:100%}
-  .tile.span-4 .body{padding:22px 0 12px 8px}
-  .tile.span-4 .ic{width:112px}
-}
 
 /* vision : flat dark band */
 .vision{margin-top:104px;padding:88px 0 96px;background:#121210;color:#f4f2ea}
 .vision .sec-h small{color:#8fa8ff}
+.v-lots{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .3em;margin:0;padding-top:56px;border-top:1px solid rgba(255,255,255,.14);font-size:clamp(40px,7.4vw,84px);line-height:1.5;font-weight:300;letter-spacing:-.035em}
+.v-lots em{font-style:normal;font-weight:800;color:#8fa8ff}
+.v-lots b,.v-lots .r{font-weight:800}
+.v-lots .op{color:#b9b6ab;font-weight:300}
+.v-lots ruby{ruby-position:over}
+.v-lots rt{font-size:.26em;font-weight:700;letter-spacing:.2em;color:#b9b6ab}
 .v-grid{display:grid;grid-template-columns:1fr}
 .v-col{padding:34px 0;border-top:1px solid rgba(255,255,255,.14)}
 @media (min-width:860px){.v-grid{grid-template-columns:repeat(3,1fr)}.v-col{padding:30px 32px 6px;border-top:0;border-left:1px solid rgba(255,255,255,.14)}.v-col:first-child{padding-left:0;border-left:0}}
@@ -189,7 +189,6 @@ footer{margin-top:96px;padding:0 0 44px}
   <div class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Mlots（エムロッツ）</p>
         <h1 aria-label="記憶に残る、毎日を"><span class="l" aria-hidden="true"><i><em>記憶に残る、</em></i></span><span class="l" aria-hidden="true"><i>毎日を</i></span></h1>
         <p class="lead">ゲームクリエイターが開発を手がける、<br>アプリブランドです。</p>
         <div class="hero-cta">
@@ -210,9 +209,9 @@ footer{margin-top:96px;padding:0 0 44px}
 
   <section id="apps" aria-labelledby="apps-title">
     <div class="wrap">
-      <h2 class="sec-h reveal" id="apps-title">Works <small>05</small></h2>
+      <h2 class="sec-h reveal" id="apps-title">Works</h2>
       <ol class="bento">
-        <li class="tile span-2 reveal">
+        <li class="tile reveal">
           <div class="panel" style="--tint:#e4e8ff"><span class="ic ic0" role="img" aria-label="Netaverse アイコン"></span></div>
           <div class="body">
             <h3>Netaverse <span class="badge">NEW</span></h3><div class="cat">ネタ帳 ・ 大喜利 / ラジオ投稿</div>
@@ -226,7 +225,7 @@ footer{margin-top:96px;padding:0 0 44px}
             </div>
           </div>
         </li>
-        <li class="tile span-4 reveal">
+        <li class="tile reveal">
           <div class="panel" style="--tint:#ffe3dc"><span class="ic ic1" role="img" aria-label="ONE CHANCE アイコン"></span></div>
           <div class="body">
             <h3>ONE CHANCE</h3><div class="cat">ライフスタイル</div>
@@ -238,7 +237,7 @@ footer{margin-top:96px;padding:0 0 44px}
             </div>
           </div>
         </li>
-        <li class="tile span-2 reveal">
+        <li class="tile reveal">
           <div class="panel" style="--tint:#dde9ff"><span class="ic ic2" role="img" aria-label="To Day Do Plus アイコン"></span></div>
           <div class="body">
             <h3>To Day Do Plus</h3><div class="cat">仕事効率化</div>
@@ -250,7 +249,7 @@ footer{margin-top:96px;padding:0 0 44px}
             </div>
           </div>
         </li>
-        <li class="tile span-2 reveal">
+        <li class="tile reveal">
           <div class="panel" style="--tint:#e8e7e1"><span class="ic ic3" role="img" aria-label="To Day Do アイコン"></span></div>
           <div class="body">
             <h3>To Day Do</h3><div class="cat">仕事効率化</div>
@@ -262,7 +261,7 @@ footer{margin-top:96px;padding:0 0 44px}
             </div>
           </div>
         </li>
-        <li class="tile span-2 reveal">
+        <li class="tile reveal">
           <div class="panel" style="--tint:#d9f0fd"><span class="ic ic4" role="img" aria-label="App Stocker アイコン"></span></div>
           <div class="body">
             <h3>App Stocker</h3><div class="cat">ユーティリティ</div>
@@ -280,8 +279,9 @@ footer{margin-top:96px;padding:0 0 44px}
 
   <section id="vision" class="vision" aria-labelledby="vision-title">
     <div class="wrap">
-      <h2 class="sec-h reveal" id="vision-title">Vision <small>03</small></h2>
-      <div class="v-grid"><div class="v-col reveal"><h3><em>M</em>emorable</h3><p class="jp">記憶に残り</p><p class="d">使った日のことを、あとからふと思い出せる。そんなアプリを目指します。</p></div><div class="v-col reveal"><h3><em>M</em>agical</h3><p class="jp">魔法のように</p><p class="d">毎日の小さな手間が、ふっと軽くなる。そんな体験を大切にします。</p></div><div class="v-col reveal"><h3><em>M</em>ore</h3><p class="jp">もっと、たくさん</p><p class="d">もっと使いやすく、もっと楽しく。更新を重ねて、磨き続けます。</p></div></div>
+      <h2 class="sec-h reveal" id="vision-title">Vision</h2>
+      <div class="v-grid"><div class="v-col reveal"><h3><em>M</em>emorable</h3><p class="jp">記憶に残る毎日を</p><p class="d">あとから思い出したくなるような毎日を、つくります。</p></div><div class="v-col reveal"><h3><em>M</em>agical</h3><p class="jp">魔法のような体験を</p><p class="d">毎日の小さな手間が、ふっと軽くなる。そんな体験を届けます。</p></div><div class="v-col reveal"><h3><em>M</em>ore</h3><p class="jp">もっと便利に、もっと快適に</p><p class="d">更新を重ねて、使いやすさと心地よさを磨き続けます。</p></div></div>
+      <p class="v-lots reveal" aria-label="M プラス lots（たくさん）イコール Mlots"><span class="m"><em>M</em></span><span class="op">+</span><ruby><b>lots</b><rt>たくさん</rt></ruby><span class="op">=</span><span class="r"><em>M</em>lots</span></p>
     </div>
   </section>
 

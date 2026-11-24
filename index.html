@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mlots（エムロッツ）| 記憶に残る、毎日を</title>
-<meta name="description" content="Mlots（エムロッツ）は、記憶に残る毎日をつくるアプリのブランド。Netaverse / ONE CHANCE / To Day Do Plus / To Day Do / App Stocker。">
+<title>Mlots（エムロッツ）| Lots of Memories. Lots of Moments. Lots of Mates.</title>
+<meta name="description" content="Mlots（エムロッツ）は、自分で選べる毎日を、作り出すアプリのブランド。Netaverse / ONE CHANCE / To Day Do Plus / To Day Do / App Stocker。">
 <link rel="canonical" href="https://mlots-tokyo.github.io/">
-<meta name="theme-color" content="#f3f2ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121210" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mlots">
-<meta property="og:title" content="Mlots（エムロッツ）| 記憶に残る、毎日を">
-<meta property="og:description" content="記憶に残るものを、たくさん。Mlots のアプリ。">
+<meta property="og:title" content="Mlots（エムロッツ）| Lots of Memories. Lots of Moments. Lots of Mates.">
+<meta property="og:description" content="たくさんの思い出を。たくさんの一瞬を。たくさんのつながりを。Mlots のアプリ。">
 <meta property="og:url" content="https://mlots-tokyo.github.io/">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
@@ -27,7 +27,7 @@
   "@type": "Organization",
   "name": "Mlots",
   "alternateName": "エムロッツ",
-  "description": "記憶に残る毎日をつくるアプリのブランド。",
+  "description": "自分で選べる毎日を、作り出すアプリのブランド。",
   "url": "https://mlots-tokyo.github.io/",
   "email": "mlots.tokyo@gmail.com",
   "sameAs": ["https://x.com/mlots_tokyo"]
@@ -95,12 +95,16 @@ ul,ol{list-style:none;margin:0;padding:0}
 @media (min-width:880px){.hero-grid{grid-template-columns:1.12fr .88fr;gap:24px}.hero{padding-top:48px}}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 22px;padding:6px 14px 6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:12.5px;font-weight:700;color:var(--body);animation:fade .8s var(--ease) both}
 .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
-.hero h1{margin:0;font-size:clamp(40px,8.4vw,92px);line-height:1.14;letter-spacing:-.035em;font-weight:800}
+.hero h1{margin:0;font-size:clamp(30px,8vw,56px);line-height:1.16;letter-spacing:-.035em;font-weight:800}
+@media (min-width:880px){.hero h1{font-size:clamp(40px,5.2vw,60px)}}
 .hero h1 .l{display:block;overflow:hidden;padding:0 .04em .1em}
 .hero h1 .l>i{display:block;font-style:normal;animation:rise 1s var(--ease) both}
 .hero h1 .l:nth-child(2)>i{animation-delay:.14s}
+.hero h1 .l:nth-child(3)>i{animation-delay:.28s}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.lead{max-width:30em;margin:26px 0 0;font-size:clamp(15px,2.2vw,18px);line-height:1.95;color:var(--body);animation:fade .9s var(--ease) .45s both}
+.hero-jp{margin:22px 0 0;font-size:clamp(15px,2.4vw,19px);font-weight:700;line-height:1.9;color:var(--ink);animation:fade .9s var(--ease) .4s both}
+.lead{max-width:30em;margin:26px 0 0;font-size:clamp(15px,2.2vw,18px);line-height:1.95;color:var(--body);animation:fade .9s var(--ease) .5s both}
+.hero-jp+.lead{margin-top:12px}
 .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;animation:fade .9s var(--ease) .6s both}
 
 /* icon cluster : sticker-like */
@@ -152,6 +156,26 @@ section{padding-top:104px}
 .v-col .d{margin:12px 0 0;max-width:340px;font-size:14.5px;line-height:1.9;color:#b9b6ab}
 @media (prefers-color-scheme:dark){.vision{background:#0b0b0a}}
 
+/* about (Mlotsとは) */
+.about-body{max-width:900px}
+.about-lead{margin:0;font-size:clamp(22px,3.8vw,40px);line-height:1.5;font-weight:800;letter-spacing:-.03em;text-wrap:balance}
+.about-sub{margin:28px 0 0;max-width:36em;font-size:clamp(15px,2.2vw,18px);line-height:2;color:var(--body);text-wrap:pretty}
+/* header: language selector inline */
+.nav{gap:14px}
+.nav-pill{margin-left:auto;gap:22px}
+.langsel select{font-size:12.5px;padding:7px 28px 7px 12px;background-position:right 10px center}
+@media (max-width:520px){.nav-pill{gap:14px}.nav-pill a{font-size:13px}.langsel select{font-size:12px;padding:6px 24px 6px 10px;background-position:right 8px center}}
+/* works: 5件を 3+2 で埋める */
+@media (min-width:980px){.tile:nth-child(n+4){grid-column:span 3}}
+/* about 2カラム */
+/* mission / vision / values */
+.nb{display:inline-block}
+html[lang="en"] .ja-only{display:none}
+.mission{margin:0;font-size:clamp(34px,6.4vw,72px);line-height:1.35;font-weight:800;letter-spacing:-.03em}
+.sec-h.sub{margin-top:96px}
+.v-col h3 small{display:block;margin-bottom:4px;font-size:17px;font-weight:700;letter-spacing:0;color:#b9b6ab}
+.v-col.val h3{font-size:clamp(30px,3.8vw,44px)}
+
 /* contact */
 .contact{text-align:center;padding:112px 0 24px}
 .contact .eyebrow-s{margin:0;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
@@ -170,8 +194,52 @@ footer{margin-top:96px;padding:0 0 44px}
 .js .reveal{opacity:0;transform:translateY(28px)}
 .js .reveal.in{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1!important;transform:none!important}.cluster .ic{transform:rotate(var(--r))}}
+/* variant */
+:root{--bg:#f6f7f9;--card:#fff;--ink:#0b0f1a;--body:#4b5262;--sub:#8a91a0;--line:transparent;--accent:#2f5bff;--accent-soft:#e4e8ff;--panel:#eceef4;--dots:none}
+@media (prefers-color-scheme:dark){:root{--bg:#f6f7f9;--card:#fff;--ink:#0b0f1a;--body:#4b5262;--sub:#8a91a0;--line:transparent;--accent:#2f5bff;--accent-soft:#e4e8ff;--panel:#eceef4;--dots:none}}
+
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+/* 罫線なし */
+.site-header{border-bottom:0;background:rgba(246,247,249,.8)}
+.foot{border-top:0}
+.v-lots,.v-col,.vision .v-col:first-child{border:0!important}
+.langsel select{border:0;box-shadow:0 2px 10px -4px rgba(11,15,26,.25)}
+.tile{border:0;box-shadow:0 2px 0 rgba(11,15,26,.03),0 18px 40px -28px rgba(11,15,26,.28)}
+@media (hover:hover){.tile:hover{box-shadow:0 30px 56px -28px rgba(47,91,255,.45)}}
+.btn-main,.tb-main{background:#0b0f1a;color:#fff}
+.btn-ghost{background:#fff;border:0;box-shadow:0 2px 10px -4px rgba(11,15,26,.25)}
+.tb-sub{background:#eceef4;border:0}
+@media (hover:hover){.btn-main:hover,.tb-main:hover{background:#2f5bff}}
+.hero h1{letter-spacing:-.055em}
+.cluster .ic{border-color:#fff;box-shadow:0 20px 38px -16px rgba(11,15,26,.5)}
+.badge{background:#2f5bff}
+/* 流れる帯（青） */
+.ticker{margin-top:80px;overflow:hidden;white-space:nowrap;background:#2f5bff;color:#fff}
+.tk{display:inline-block;padding:15px 0;font-size:clamp(14px,2vw,18px);font-weight:700;letter-spacing:.16em;text-transform:uppercase;animation:tk 100s linear infinite}
+.tk span{margin:0 1.2em;opacity:.55}
+@keyframes tk{to{transform:translateX(-50%)}}
+.ticker:hover .tk{animation-play-state:paused}
+/* about: 黒い帯 */
+.vision{background:#0b1122!important;color:#f2f4f8}
+.vision .sec-h small{color:#8aa4ff}
+.vision .v-col h3 em,.vision .v-lots em,.vision .v-lots .r em{color:#2f5bff}
+.vision .v-lots .op,.vision .v-lots rt,.vision .v-col h3 small,.vision .v-col .d{color:#aab2c3}
+.vision.values-band{margin-top:0;padding-top:0}
+.vision.values-band .sec-h.sub{margin-top:0}
+.v-lots{padding-top:40px}
+.v-grid{gap:8px}
+.vision .v-col,.vision .v-col:first-child{padding-left:0!important}
+@media (min-width:860px){.vision .v-col{padding:30px 32px 6px!important}.vision .v-col:first-child{padding-left:0!important}}
+.mail{background:#0b0f1a;color:#fff}
+@media (hover:hover){.mail:hover{background:#2f5bff}}
+.bento .tile:nth-child(1) .panel{background:#e3e9ff!important}
+.bento .tile:nth-child(2) .panel{background:#eceef4!important}
+.bento .tile:nth-child(3) .panel{background:#dde5ff!important}
+.bento .tile:nth-child(4) .panel{background:#e9ebf1!important}
+.bento .tile:nth-child(5) .panel{background:#d6e0fb!important}
 </style>
 <script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <a class="skip" href="#apps">コンテンツへスキップ</a>
@@ -181,20 +249,18 @@ footer{margin-top:96px;padding:0 0 44px}
     <a class="brand" href="#top" aria-label="Mlots トップへ"><svg class="logo" viewBox="18.0 -762.0 2539.0 813.3" role="img" aria-label="Mlots" xmlns="http://www.w3.org/2000/svg"><path class="letters" d="M58 0L58 -482.3L190 -482.3L190 0ZM372.3 0L372.3 -285Q372.3 -327.3 346.5 -351.2Q320.7 -375 282.3 -375Q256 -375 235.3 -364Q214.7 -353 202.3 -333.3Q190 -313.7 190 -285.3L138.3 -308.7Q138.3 -365.3 162.8 -406.3Q187.3 -447.3 229.7 -469.8Q272 -492.3 325 -492.3Q375.7 -492.3 416.2 -469.7Q456.7 -447 480.5 -406.3Q504.3 -365.7 504.3 -309.3L504.3 0ZM686.7 0L686.7 -285Q686.7 -327.3 660.8 -351.2Q635 -375 597 -375Q570.7 -375 549.8 -364Q529 -353 516.7 -333.3Q504.3 -313.7 504.3 -285.3L428.7 -299.3Q431 -359 458.2 -401.8Q485.3 -444.7 529.7 -468.5Q574 -492.3 628.7 -492.3Q683.3 -492.3 726 -469.3Q768.7 -446.3 793.8 -404Q819 -361.7 819 -302.3L819 0ZM895 0L895 -722L1027 -722L1027 0ZM1863.3 0L1863.3 -682.7L1995.3 -682.7L1995.3 0ZM1751 -368.3L1751 -482.3L2107.7 -482.3L2107.7 -368.3ZM2320 11.3Q2278 11.3 2238.5 0.5Q2199 -10.3 2165.3 -30.5Q2131.7 -50.7 2107.7 -77.7L2185 -155.7Q2209.7 -127.7 2243 -112.8Q2276.3 -98 2316.3 -98Q2348.3 -98 2365.7 -108.2Q2383 -118.3 2383 -136.3Q2383 -157 2365.2 -168.2Q2347.3 -179.3 2319.7 -187.5Q2292 -195.7 2261.2 -204.8Q2230.3 -214 2202.7 -229.7Q2175 -245.3 2157.5 -273Q2140 -300.7 2140 -344.3Q2140 -390 2163 -423.5Q2186 -457 2227.8 -476Q2269.7 -495 2326.7 -495Q2386.7 -495 2436.2 -474.2Q2485.7 -453.3 2517 -412.3L2439.7 -334.3Q2417.7 -361 2388.8 -373Q2360 -385 2329.7 -385Q2299.3 -385 2283.8 -375.5Q2268.3 -366 2268.3 -348.7Q2268.3 -330.7 2285.7 -320.3Q2303 -310 2330.8 -302.3Q2358.7 -294.7 2389.3 -284.8Q2420 -275 2447.7 -258.3Q2475.3 -241.7 2492.8 -213.7Q2510.3 -185.7 2510.3 -140.3Q2510.3 -70.7 2458.8 -29.7Q2407.3 11.3 2320 11.3Z"/><path class="swirl" d="M1395 -315.8L1399.1 -323.1L1400.2 -332.4L1399.1 -342.7L1395 -353L1387.8 -363.4L1378.5 -371.6L1366.1 -377.8L1351.6 -382L1336.1 -380.9L1319.6 -376.8L1304.1 -368.5L1289.6 -357.2L1278.2 -340.6L1271 -322L1266.9 -300.3L1268.9 -277.6L1275.1 -255.9L1287.5 -234.2L1305.1 -215.6L1326.8 -201.1L1352.6 -191.8L1380.5 -187.7L1409.5 -189.8L1438.4 -199.1L1465.3 -214.6L1488 -237.3L1506.6 -264.2L1519 -296.2L1524.2 -331.3L1521.1 -366.5L1509.7 -402.6L1491.1 -434.7L1464.2 -463.6L1431.2 -486.3L1392.9 -500.8L1351.6 -508L1309.2 -504.9L1266.9 -492.5L1227.6 -469.8L1193.5 -439.8L1166.6 -400.6L1149.1 -357.2L1140.8 -308.6L1142.9 -259L1157.3 -210.4L1181.1 -165L1216.2 -124.7L1259.6 -93.7L1309.2 -72L1364 -60.6L1420.8 -62.7L1476.6 -77.1L1528.3 -104L1573.8 -142.2L1611 -189.8L1636.8 -245.6L1650.2 -306.5L1649.2 -370.6L1634.7 -432.6L1606.8 -491.5"/></svg></a>
     <nav class="nav-pill" aria-label="メインメニュー">
       <a href="#apps">Works</a>
-      <a href="#vision">Vision</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+    <label class="langsel"><select id="lang-select" aria-label="Language / 言語"><option value="" selected hidden>Language</option><option value="ja">日本語</option><option value="en">English</option></select></label>
   </div>
 </header>
-
-<div class="langbar"><div class="wrap"><label class="langsel"><select id="lang-select" aria-label="Language / 言語"><option value="" selected hidden>Language</option><option value="ja">日本語</option><option value="en">English</option></select></label></div></div>
 
 <main id="main">
   <div class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1 aria-label="記憶に残る、毎日を"><span class="l" aria-hidden="true"><i><em>記憶に残る、</em></i></span><span class="l" aria-hidden="true"><i>毎日を</i></span></h1>
-        <p class="lead">ゲームクリエイターが開発を手がける、<br>アプリブランドです。</p>
+        <h1 aria-label="Lots of Memories. Lots of Moments. Lots of Mates."><span class="l" aria-hidden="true"><i>Lots of <em>M</em>emories.</i></span><span class="l" aria-hidden="true"><i>Lots of <em>M</em>oments.</i></span><span class="l" aria-hidden="true"><i>Lots of <em>M</em>ates.</i></span></h1>
         <div class="hero-cta">
           <a class="btn btn-main" href="#apps">作品を見る</a>
           <a class="btn btn-ghost" href="https://x.com/mlots_tokyo" target="_blank" rel="noopener" aria-label="X アカウント"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> アカウント</a>
@@ -210,6 +276,8 @@ footer{margin-top:96px;padding:0 0 44px}
       </div>
     </div>
   </div>
+
+  <div class="ticker" aria-hidden="true"><div class="tk">Lots of Memories <span>/</span> Lots of Moments <span>/</span> Lots of Mates <span>/</span> Lots of Memories <span>/</span> Lots of Moments <span>/</span> Lots of Mates <span>/</span> Lots of Memories <span>/</span> Lots of Moments <span>/</span> Lots of Mates <span>/</span> Lots of Memories <span>/</span> Lots of Moments <span>/</span> Lots of Mates <span>/</span> Lots of Memories <span>/</span> Lots of Moments <span>/</span> Lots of Mates <span>/</span> Lots of Memories <span>/</span> Lots of Moments <span>/</span> Lots of Mates <span>/</span> </div></div>
 
   <section id="apps" aria-labelledby="apps-title">
     <div class="wrap">
@@ -276,11 +344,26 @@ footer{margin-top:96px;padding:0 0 44px}
     </div>
   </section>
 
-  <section id="vision" class="vision" aria-labelledby="vision-title">
+  <section id="about" aria-labelledby="about-title">
     <div class="wrap">
-      <h2 class="sec-h reveal" id="vision-title">Vision</h2>
-      <div class="v-grid"><div class="v-col reveal"><h3><em>M</em>emorable</h3><p class="jp">記憶に残る毎日を</p><p class="d">あとから思い出したくなるような毎日を、つくります。</p></div><div class="v-col reveal"><h3><em>M</em>agical</h3><p class="jp">魔法のような体験を</p><p class="d">毎日の小さな手間が、ふっと軽くなる。そんな体験を届けます。</p></div><div class="v-col reveal"><h3><em>M</em>ore</h3><p class="jp">もっと便利に、もっと快適に</p><p class="d">更新を重ねて、使いやすさと心地よさを磨き続けます。</p></div></div>
+      <h2 class="sec-h reveal" id="about-title">About</h2>
+      <div class="about-body reveal">
+        <p class="about-lead">Mlots は、ゲームクリエイターを本職とする開発者が、ゲーム開発の知恵やスキルを活かして、手がけるアプリブランドです。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="principles" class="vision" aria-label="Mission, Vision, Values">
+    <div class="wrap">
+      <h2 class="sec-h reveal" id="mission">Mission</h2>
+      <p class="mission reveal"><span class="nb">自分で選べる毎日を、</span><span class="nb">作り出す。</span></p>
+
+      <h2 class="sec-h sub reveal" id="vision">Vision</h2>
+      <div class="v-grid"><div class="v-col reveal"><h3><small>Lots of</small><em>M</em>emories</h3><p class="jp ja-only">たくさんの思い出を。</p><p class="d">誰かの思い出になるものを、作ります。</p></div><div class="v-col reveal"><h3><small>Lots of</small><em>M</em>oments</h3><p class="jp ja-only">たくさんの一瞬を。</p><p class="d">かけがえのない瞬間を、作ります。</p></div><div class="v-col reveal"><h3><small>Lots of</small><em>M</em>ates</h3><p class="jp ja-only">たくさんのつながりを。</p><p class="d">誰かとつながるきっかけを、作ります。</p></div></div>
       <p class="v-lots reveal" aria-label="M プラス lots（たくさん）イコール Mlots"><span class="m"><em>M</em></span><span class="op">+</span><ruby><b>lots</b><rt>たくさん</rt></ruby><span class="op">=</span><span class="r"><em>M</em>lots</span></p>
+
+      </div></section><section class="vision values-band" aria-label="Values"><div class="wrap"><h2 class="sec-h sub reveal" id="values">Values</h2>
+      <div class="v-grid"><div class="v-col val reveal"><h3><em>F</em>irsthand</h3><p class="jp">想像ではなく、自分の必要から作る。</p><p class="d">「こんなものが欲しいだろう」ではなく、自分が本当に必要とするものから作り始めます。</p></div><div class="v-col val reveal"><h3><em>M</em>eticulous</h3><p class="jp">細部まで、美しく作り込む。</p><p class="d">見た目も、触った感触も、動きも。細かなところまで丁寧に整えます。</p></div><div class="v-col val reveal"><h3><em>S</em>eamless</h3><p class="jp">毎日に、すっとなじむ。</p><p class="d">毎日、自然に使えるアプリにします。</p></div></div>
     </div>
   </section>
 
@@ -317,7 +400,7 @@ window.scrollTo(0,0);
 </script>
 <script>
 (function(){
-  var T={"コンテンツへスキップ": "Skip to content", "EN": "日本語", "記憶に残る、": "Days worth", "毎日を": "remembering.", "ゲームクリエイターが開発を手がける、": "An app brand developed", "アプリブランドです。": "by game creators.", "作品を見る": "View works", "アカウント": "Account", "お問い合わせ": "Contact", "ネタ帳 ・ 大喜利 / ラジオ投稿": "Idea notebook · Comedy riffs / Radio submissions", "大喜利やラジオ投稿のためのネタ帳アプリです。ふと思いついたネタをすぐ書き留めて、あとから見返して磨いていけます。": "A notebook app for oogiri (comedy improv) and radio submissions. Jot down ideas the moment they strike, then look back and polish them later.", "大喜利": "Oogiri", "ラジオ投稿": "Radio submissions", "ネタ帳": "Idea notebook", "プライバシーポリシー": "Privacy Policy", "ライフスタイル": "Lifestyle", "愛犬との「残り時間」を見える化して、後悔のない毎日を過ごすためのアプリです。誕生日と目標年齢から残り時間を表示し、やりたいことリスト、写真つきの思い出記録、犬との暮らしを学べる記事や本の紹介に対応しています。": "An app that visualizes the time you have left with your dog, so you can spend every day without regrets. It shows your remaining time from your dog's birthday and a target age, with a bucket list, photo memories, and articles and book picks about life with dogs.", "残り時間": "Time left", "やりたいことリスト": "Bucket list", "思い出記録": "Memories", "仕事効率化": "Productivity", "「毎日ゼロから始める」ToDoリスト『To Day Do』に、さらに便利な機能を加えたアプリです。リスト分け、繰り返しの予定、今後の予定、リマインダー通知、iCloud同期に対応しています。": "To Day Do, the to-do list that starts from zero every day, with even more useful features: separate lists, repeating events, upcoming plans, reminder notifications, and iCloud sync.", "広告なし": "No ads", "追加課金なし": "No in-app purchases", "iCloud同期": "iCloud sync", "リマインダー": "Reminders", "「毎日ゼロから始める」ToDoリストです。毎日決まった時間にタスクが自動消去されるため、昨日までのやり残しに縛られず、最高の「今日」をデザインしましょう。": "A to-do list that starts from zero every day. Tasks clear automatically at a set time each day, so you're free from yesterday's leftovers and can design the best possible \"today.\"", "毎日自動リセット": "Daily auto-reset", "シンプル": "Simple", "ユーティリティ": "Utilities", "気になるアプリを保存しておける、アプリ専用の「欲しいものリスト」です。App Storeの「共有」から追加できます。保存したアプリの価格が下がると、アプリを開いたときにお知らせします。": "A wish list just for apps. Add apps you're curious about from the App Store's Share menu, and get notified when you open the app if a saved app's price has dropped.", "共有メニューから追加": "Add from the Share menu", "価格が下がったらお知らせ": "Price drop alerts", "記憶に残る毎日を": "Days worth remembering", "あとから思い出したくなるような毎日を、つくります。": "We create everyday days you'll want to look back on.", "魔法のような体験を": "A touch of magic", "毎日の小さな手間が、ふっと軽くなる。そんな体験を届けます。": "Small daily chores suddenly feel lighter. That's the experience we deliver.", "もっと便利に、もっと快適に": "More useful, more comfortable", "更新を重ねて、使いやすさと心地よさを磨き続けます。": "We keep updating to refine ease of use and comfort.", "たくさん": "many", "ご意見・ご相談": "Feedback & inquiries", "アプリの使い方、不具合のご連絡、ご要望など、メールでお待ちしています。": "Questions about using the apps, bug reports, feature requests — we'd love to hear from you by email."},A={"Mlots トップへ": "Mlots home", "メインメニュー": "Main menu", "View in English": "日本語で見る", "記憶に残る、毎日を": "Days worth remembering", "X アカウント": "X account", "Netaverse アイコン": "Netaverse icon", "ONE CHANCE アイコン": "ONE CHANCE icon", "To Day Do Plus アイコン": "To Day Do Plus icon", "To Day Do アイコン": "To Day Do icon", "App Stocker アイコン": "App Stocker icon", "M プラス lots（たくさん）イコール Mlots": "M plus lots (many) equals Mlots"},M={"title": "Mlots | Everyday life worth remembering", "description": "Mlots is an app brand that makes everyday life memorable. Netaverse / ONE CHANCE / To Day Do Plus / To Day Do / App Stocker.", "og:title": "Mlots | Everyday life worth remembering", "og:description": "Lots of things worth remembering. Apps by Mlots."};
+  var T={"Mlots は、ゲームクリエイターを本職とする開発者が、ゲーム開発の知恵やスキルを活かして、手がけるアプリブランドです。": "Mlots is an app brand built by a developer whose day job is game creation, drawing on the know-how and skills of game development.", "コンテンツへスキップ": "Skip to content", "EN": "日本語", "作品を見る": "View works", "アカウント": "Account", "お問い合わせ": "Contact", "ネタ帳 ・ 大喜利 / ラジオ投稿": "Idea notebook · Comedy riffs / Radio submissions", "大喜利やラジオ投稿のためのネタ帳アプリです。ふと思いついたネタをすぐ書き留めて、あとから見返して磨いていけます。": "A notebook app for oogiri (comedy improv) and radio submissions. Jot down ideas the moment they strike, then look back and polish them later.", "大喜利": "Oogiri", "ラジオ投稿": "Radio submissions", "ネタ帳": "Idea notebook", "プライバシーポリシー": "Privacy Policy", "ライフスタイル": "Lifestyle", "愛犬との「残り時間」を見える化して、後悔のない毎日を過ごすためのアプリです。誕生日と目標年齢から残り時間を表示し、やりたいことリスト、写真つきの思い出記録、犬との暮らしを学べる記事や本の紹介に対応しています。": "An app that visualizes the time you have left with your dog, so you can spend every day without regrets. It shows your remaining time from your dog's birthday and a target age, with a bucket list, photo memories, and articles and book picks about life with dogs.", "残り時間": "Time left", "やりたいことリスト": "Bucket list", "思い出記録": "Memories", "仕事効率化": "Productivity", "「毎日ゼロから始める」ToDoリスト『To Day Do』に、さらに便利な機能を加えたアプリです。リスト分け、繰り返しの予定、今後の予定、リマインダー通知、iCloud同期に対応しています。": "To Day Do, the to-do list that starts from zero every day, with even more useful features: separate lists, repeating events, upcoming plans, reminder notifications, and iCloud sync.", "広告なし": "No ads", "追加課金なし": "No in-app purchases", "iCloud同期": "iCloud sync", "リマインダー": "Reminders", "「毎日ゼロから始める」ToDoリストです。毎日決まった時間にタスクが自動消去されるため、昨日までのやり残しに縛られず、最高の「今日」をデザインしましょう。": "A to-do list that starts from zero every day. Tasks clear automatically at a set time each day, so you're free from yesterday's leftovers and can design the best possible \"today.\"", "毎日自動リセット": "Daily auto-reset", "シンプル": "Simple", "ユーティリティ": "Utilities", "気になるアプリを保存しておける、アプリ専用の「欲しいものリスト」です。App Storeの「共有」から追加できます。保存したアプリの価格が下がると、アプリを開いたときにお知らせします。": "A wish list just for apps. Add apps you're curious about from the App Store's Share menu, and get notified when you open the app if a saved app's price has dropped.", "共有メニューから追加": "Add from the Share menu", "価格が下がったらお知らせ": "Price drop alerts", "たくさん": "many", "ご意見・ご相談": "Feedback & inquiries", "アプリの使い方、不具合のご連絡、ご要望など、メールでお待ちしています。": "Questions about using the apps, bug reports, feature requests — we'd love to hear from you by email.", "自分で選べる毎日を、": "Days you can choose for yourself,", "作り出す。": "we create.", "誰かの思い出になるものを、作ります。": "We make things that become someone's memories.", "かけがえのない瞬間を、作ります。": "We create irreplaceable moments.", "誰かとつながるきっかけを、作ります。": "We create chances to connect with someone.", "想像ではなく、自分の必要から作る。": "Build from your own real needs, not imagination.", "「こんなものが欲しいだろう」ではなく、自分が本当に必要とするものから作り始めます。": "Not 'people would want this,' but what we truly need ourselves.", "細部まで、美しく作り込む。": "Craft every detail with care and beauty.", "見た目も、触った感触も、動きも。細かなところまで丁寧に整えます。": "Looks, feel, and motion. We refine even the smallest parts.", "毎日に、すっとなじむ。": "Blend smoothly into everyday life.", "毎日、自然に使えるアプリにします。": "Apps you can use naturally, every day."},A={"Mlots トップへ": "Mlots home", "メインメニュー": "Main menu", "View in English": "日本語で見る", "X アカウント": "X account", "Netaverse アイコン": "Netaverse icon", "ONE CHANCE アイコン": "ONE CHANCE icon", "To Day Do Plus アイコン": "To Day Do Plus icon", "To Day Do アイコン": "To Day Do icon", "App Stocker アイコン": "App Stocker icon", "M プラス lots（たくさん）イコール Mlots": "M plus lots (many) equals Mlots"},M={"title": "Mlots | Lots of Memories. Lots of Moments. Lots of Mates.", "description": "Mlots is an app brand that creates days you can choose for yourself. Netaverse / ONE CHANCE / To Day Do Plus / To Day Do / App Stocker.", "og:title": "Mlots | Lots of Memories. Lots of Moments. Lots of Mates.", "og:description": "Lots of Memories. Lots of Moments. Lots of Mates. Apps by Mlots."};
   var KEY='mlots-lang',txt=[],attr=[],jaMeta={};
   var sel=document.getElementById('lang-select');
   function metaEls(){return {description:document.querySelector('meta[name=description]'),'og:title':document.querySelector('meta[property="og:title"]'),'og:description':document.querySelector('meta[property="og:description"]')};}
@@ -341,7 +424,7 @@ window.scrollTo(0,0);
     var L=(navigator.languages&&navigator.languages[0])||navigator.language||'ja';
     return /^ja/i.test(L)?'ja':'en';}
   var cur=pick();apply(cur);
-  if(sel)sel.addEventListener('change',function(){if(!sel.value)return;cur=sel.value;sel.selectedIndex=0;try{localStorage.setItem(KEY,cur)}catch(x){}apply(cur);});
+  if(sel)sel.addEventListener('change',function(){if(!sel.value)return;cur=sel.value;try{localStorage.setItem(KEY,cur)}catch(x){}apply(cur);});
 })();
 </script>
 </body>

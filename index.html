@@ -138,17 +138,19 @@ section{padding-top:112px}
 .tb-sub{background:var(--panel);color:var(--ink)}
 @media (hover:hover){.tbtn:hover{transform:translateY(-2px)}.tb-main:hover{background:var(--accent)}}
 
+@media (max-width:520px){.tile-act{flex-wrap:nowrap}.tbtn{flex:1 1 auto;padding:0 10px;font-size:12px;white-space:nowrap}}
+
 /* about */
 .about-lead{max-width:22em;font-size:clamp(22px,3.8vw,40px);line-height:1.5;font-weight:800;letter-spacing:-.03em;text-wrap:balance}
 .about-sub{max-width:36em;margin-top:22px;font-size:clamp(14.5px,2vw,16.5px);line-height:2;color:var(--body)}
 .name-card{margin-top:44px;padding:28px 24px 30px;border-radius:30px;background:var(--card);box-shadow:var(--shadow)}
 .name-card .t{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--sub)}
-.eq{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:flex-start;gap:14px 22px;margin-top:18px}
+.eq{display:flex;flex-wrap:nowrap;align-items:flex-start;justify-content:flex-start;gap:14px 22px;margin-top:18px}
 .eq-i b{display:block;font-size:clamp(40px,7vw,76px);line-height:1.1;font-weight:800;letter-spacing:-.04em}
 .eq-i b em{font-style:normal;color:var(--accent)}
 .eq-i small{display:block;margin-top:6px;font-size:13px;font-weight:700;line-height:1.6;color:var(--sub)}
 .eq .op{font-size:clamp(28px,4.4vw,44px);line-height:1.5;font-weight:300;color:var(--sub)}
-@media (max-width:520px){.eq{gap:10px 14px}}
+@media (max-width:520px){.name-card{padding:22px 18px 24px}.eq{gap:6px}.eq-i b{font-size:9vw}.eq-i small{font-size:11px;margin-top:4px}.eq .op{font-size:6vw}}
 
 /* philosophy band (dark) */
 .dark{margin-top:112px;padding:96px 0 104px;background:var(--dark);color:#f2f4f8}
@@ -318,7 +320,7 @@ footer{margin-top:96px;padding:0 0 44px}
           <span class="op">+</span>
           <div class="eq-i"><b>lots</b><small data-en="many">たくさん</small></div>
           <span class="op">=</span>
-          <div class="eq-i"><b><em>M</em>lots</b><small data-en="Mlots (pronounced “emu-rotsu”)">エムロッツ</small></div>
+          <div class="eq-i"><b><em>M</em>lots</b><small data-en="Emurotsu">エムロッツ</small></div>
         </div>
       </div>
     </div>

@@ -431,7 +431,7 @@ section{padding-top:112px}
 
 /* about */
 /* About: 余白と文字サイズの設計（⁠文節区切りは文中の見えない区切りで制御⁠） */
-.catch,.tile-desc,.about-sub,.mis .mt,.mis .ms,.vi b,.vi p{word-break:keep-all;overflow-wrap:anywhere}
+.catch,.tile-desc,.about-sub,.mis .mt,.mis .ms,.vi b,.vi p{word-break:normal;overflow-wrap:normal;line-break:strict}
 #about .sec-head{margin-bottom:22px}
 .about-sub{max-width:34em;margin:0;font-size:clamp(15px,2vw,16px);line-height:1.85;color:var(--body);text-wrap:pretty}
 .vals{margin-top:clamp(44px,7vw,80px);max-width:40em}
@@ -440,7 +440,7 @@ section{padding-top:112px}
 .vk{margin-bottom:14px;font-size:12px;font-weight:800;letter-spacing:.16em;line-height:1;color:var(--accent)}
 .mis .mt,.vi b{display:block;margin:0;font-size:clamp(21px,2.8vw,26px);font-weight:800;line-height:1.45;letter-spacing:-.015em;color:var(--ink);text-wrap:balance}
 .mis .ms,.vi p{display:block;margin:8px 0 0;max-width:34em;font-size:14px;line-height:1.85;color:#5d6577;text-wrap:pretty}
-.nbk{display:inline-block}
+.nbk{display:inline-block;max-width:100%;overflow-wrap:anywhere}
 .mis .ms .ml{display:block}
 html[lang="en"] .nbk+.nbk{margin-left:.2em}
 .vi{margin:0 0 clamp(28px,3.6vw,36px)}
@@ -679,8 +679,8 @@ footer{margin-top:96px;padding:0 0 44px}
           <div class="body">
             <h3>Netaverse <span class="badge">NEW</span></h3>
             <div class="cat" data-en="Entertainment">エンターテイメント</div>
-            <p class="catch" data-en="Write it, submit it, and track it all the way to acceptance.">ネタを書いて、​投稿して、​採用まで記録する。</p>
-            <p class="tile-desc" data-en="Organize your ideas by show and prompt, copy them in one tap to submit, and log what you&#x27;ve sent and what got picked. A results report lets you look back on how you&#x27;re doing.">番組とお題ごとに​ネタを整理して、​ワンタップで​コピーして​投稿できます。​投稿したことも​採用されたことも​記録され、​成績レポートで​振り返れます。</p>
+            <p class="catch" data-en="Write it, submit it, and track it all the way to acceptance."><span class="nbk">ネタを書いて、</span><span class="nbk">投稿して、</span><span class="nbk">採用まで記録する。</span></p>
+            <p class="tile-desc" data-en="Organize your ideas by show and prompt, copy them in one tap to submit, and log what you&#x27;ve sent and what got picked. A results report lets you look back on how you&#x27;re doing."><span class="nbk">番組とお題ごとに</span><span class="nbk">ネタを整理して、</span><span class="nbk">ワンタップで</span><span class="nbk">コピーして</span><span class="nbk">投稿できます。</span><span class="nbk">投稿したことも</span><span class="nbk">採用されたことも</span><span class="nbk">記録され、</span><span class="nbk">成績レポートで</span><span class="nbk">振り返れます。</span></p>
             </div>
           <div class="tile-act">
               <a href="https://apps.apple.com/jp/app/netaverse-%E3%83%8D%E3%82%BF%E3%83%90%E3%83%BC%E3%82%B9-%E5%A4%A7%E5%96%9C%E5%88%A9-%E3%83%A9%E3%82%B8%E3%82%AA%E6%8A%95%E7%A8%BF%E3%81%AE%E3%83%8D%E3%82%BF%E5%B8%B3/id6831954932" target="_blank" rel="noopener" class="tbtn tb-main" data-en="View on App Store">App Store で見る</a>
@@ -691,8 +691,8 @@ footer{margin-top:96px;padding:0 0 44px}
           <div class="body">
             <h3>ONE CHANCE</h3>
             <div class="cat" data-en="Lifestyle">ライフスタイル</div>
-            <p class="catch" data-en="Time with your dog is more limited than you think.">愛犬との時間は、​思っているより​限られている。</p>
-            <p class="tile-desc" data-en="Count down the time you have left from your dog&#x27;s birthday and a target age. A bucket list, photo memories, and helpful articles and books help you spend it without regrets.">愛犬の誕生日と​目標年齢から、​残りの時間を​カウントダウン。​やりたいことリストや​写真つきの思い出、​役立つ記事や​本の紹介で、​後悔なく過ごす​きっかけになります。</p>
+            <p class="catch" data-en="Time with your dog is more limited than you think."><span class="nbk">愛犬との時間は、</span><span class="nbk">思っているより</span><span class="nbk">限られている。</span></p>
+            <p class="tile-desc" data-en="Count down the time you have left from your dog&#x27;s birthday and a target age. A bucket list, photo memories, and helpful articles and books help you spend it without regrets."><span class="nbk">愛犬の誕生日と</span><span class="nbk">目標年齢から、</span><span class="nbk">残りの時間を</span><span class="nbk">カウントダウン。</span><span class="nbk">やりたいことリストや</span><span class="nbk">写真つきの思い出、</span><span class="nbk">役立つ記事や</span><span class="nbk">本の紹介で、</span><span class="nbk">後悔なく過ごす</span><span class="nbk">きっかけになります。</span></p>
             </div>
           <div class="tile-act">
               <a href="https://apps.apple.com/jp/app/id6830976700" target="_blank" rel="noopener" class="tbtn tb-main" data-en="View on App Store">App Store で見る</a>
@@ -703,8 +703,8 @@ footer{margin-top:96px;padding:0 0 44px}
           <div class="body">
             <h3>To Day Do Plus</h3>
             <div class="cat" data-en="Productivity">仕事効率化</div>
-            <p class="catch" data-en="No more chasing yesterday&#x27;s unfinished tasks.">昨日までの​未完了タスクに、​もう追われない。</p>
-            <p class="tile-desc" data-en="To Day Do, plus separate lists, repeating and upcoming tasks, and iCloud sync. Leftovers clear automatically, so you can design the best possible &quot;today.&quot;">「⁠To Day Do⁠」に、​リスト分け、​繰り返し・今後の予定、​iCloud同期を​加えました。​やり残しは​自動で消えるので、​最高の「⁠今日⁠」を​デザインできます。</p>
+            <p class="catch" data-en="No more chasing yesterday&#x27;s unfinished tasks."><span class="nbk">昨日までの</span><span class="nbk">未完了タスクに、</span><span class="nbk">もう追われない。</span></p>
+            <p class="tile-desc" data-en="To Day Do, plus separate lists, repeating and upcoming tasks, and iCloud sync. Leftovers clear automatically, so you can design the best possible &quot;today.&quot;"><span class="nbk">「To Day Do」に、</span><span class="nbk">リスト分け、</span><span class="nbk">繰り返し・今後の予定、</span><span class="nbk">iCloud同期を</span><span class="nbk">加えました。</span><span class="nbk">やり残しは</span><span class="nbk">自動で消えるので、</span><span class="nbk">最高の「今日」を</span><span class="nbk">デザインできます。</span></p>
             </div>
           <div class="tile-act">
               <a href="https://apps.apple.com/jp/app/id6823884572" target="_blank" rel="noopener" class="tbtn tb-main" data-en="View on App Store">App Store で見る</a>
@@ -715,8 +715,8 @@ footer{margin-top:96px;padding:0 0 44px}
           <div class="body">
             <h3>To Day Do</h3>
             <div class="cat" data-en="Productivity">仕事効率化</div>
-            <p class="catch" data-en="A simple to-do list that starts from zero every day.">毎日ゼロから始める、​シンプルな​ToDoリスト。</p>
-            <p class="tile-desc" data-en="At the time you set, unfinished tasks clear themselves. A to-do list you can use with a relaxed &quot;do it if I can&quot; attitude.">決めた時間になると、​やり残したタスクは​自動で消えます。​「⁠やれたらやる⁠」くらいの​気持ちで使える​ToDoリストです。</p>
+            <p class="catch" data-en="A simple to-do list that starts from zero every day."><span class="nbk">毎日ゼロから始める、</span><span class="nbk">シンプルな</span><span class="nbk">ToDoリスト。</span></p>
+            <p class="tile-desc" data-en="At the time you set, unfinished tasks clear themselves. A to-do list you can use with a relaxed &quot;do it if I can&quot; attitude."><span class="nbk">決めた時間になると、</span><span class="nbk">やり残したタスクは</span><span class="nbk">自動で消えます。</span><span class="nbk">「やれたらやる」くらいの</span><span class="nbk">気持ちで使える</span><span class="nbk">ToDoリストです。</span></p>
             </div>
           <div class="tile-act">
               <a href="https://apps.apple.com/jp/app/id6759670393" target="_blank" rel="noopener" class="tbtn tb-main" data-en="View on App Store">App Store で見る</a>
@@ -727,8 +727,8 @@ footer{margin-top:96px;padding:0 0 44px}
           <div class="body">
             <h3>App Stocker</h3>
             <div class="cat" data-en="Utilities">ユーティリティ</div>
-            <p class="catch" data-en="A &quot;save for later&quot; list for the apps you&#x27;re curious about.">気になるアプリを、​「⁠あとで⁠」​リストに。</p>
-            <p class="tile-desc" data-en="A wish list made just for apps. Add them from the Share menu or by pasting a link, and get a notification when a saved paid app drops in price.">アプリ専用の​「⁠欲しいものリスト⁠」です。​App Store の​「⁠共有⁠」や​リンクの貼り付けで​追加でき、​保存した有料アプリが​値下げされると​通知でお知らせします。</p>
+            <p class="catch" data-en="A &quot;save for later&quot; list for the apps you&#x27;re curious about."><span class="nbk">気になるアプリを、</span><span class="nbk">「あとで」</span><span class="nbk">リストに。</span></p>
+            <p class="tile-desc" data-en="A wish list made just for apps. Add them from the Share menu or by pasting a link, and get a notification when a saved paid app drops in price."><span class="nbk">アプリ専用の</span><span class="nbk">「欲しいものリスト」です。</span><span class="nbk">App Store の</span><span class="nbk">「共有」や</span><span class="nbk">リンクの貼り付けで</span><span class="nbk">追加でき、</span><span class="nbk">保存した有料アプリが</span><span class="nbk">値下げされると</span><span class="nbk">通知でお知らせします。</span></p>
             </div>
           <div class="tile-act">
               <a href="https://apps.apple.com/jp/app/id6759819675" target="_blank" rel="noopener" class="tbtn tb-main" data-en="View on App Store">App Store で見る</a>
@@ -745,11 +745,11 @@ footer{margin-top:96px;padding:0 0 44px}
         <h2 class="sec-h" id="about-title">About</h2>
       </div>
       
-      <p class="about-sub reveal" data-en="Mlots is an app brand built by a developer whose day job is game design, drawing on the know-how and skills of game development.">Mlots は、​ゲームデザインを​本職とする開発者が、​ゲーム開発の​ノウハウやスキルを​活かして手がける​アプリブランドです。</p>
+      <p class="about-sub reveal" data-en="Mlots is an app brand built by a developer whose day job is game design, drawing on the know-how and skills of game development."><span class="nbk">Mlots は、</span><span class="nbk">ゲームデザインを</span><span class="nbk">本職とする開発者が、</span><span class="nbk">ゲーム開発の</span><span class="nbk">ノウハウやスキルを</span><span class="nbk">活かして手がける</span><span class="nbk">アプリブランドです。</span></p>
       <div class="vals reveal">
-        <div class="vrow mis"><div class="vk" data-en="Mission">Mission</div><p class="mt"><span class="nbk" data-en="Days you can choose for yourself,">自分で選べる毎日を、</span><span class="nbk" data-en="we create.">作り出す。</span></p><p class="ms"><span class="ml" data-en="What will you spend your time on? What do you hold dear?">何に時間を使うのか、​何を大切にするのか。</span><span class="ml" data-en="We support you in creating the days you choose.">自分で選んだ​毎日を作り出すことを​支えます。</span></p></div>
-        <div class="vrow"><div class="vk" data-en="Vision">Vision</div><div class="vv"><div class="vi"><b data-en="Lots of memories.">たくさんの思い出を。</b><p data-en="We make things that become someone's memories.">誰かの思い出になるものを、​作ります。</p></div><div class="vi"><b data-en="Lots of moments.">たくさんのひとときを。</b><p data-en="We create irreplaceable moments.">かけがえのない​ひとときを、​作ります。</p></div></div></div>
-        <div class="vrow"><div class="vk" data-en="Values">Values</div><div class="vv"><div class="vi"><b data-en="Build from your own real needs, not imagination.">想像ではなく、​自分の必要から作る。</b><p data-en="Not 'people would want this,' but what we truly need ourselves.">「⁠こんなものが欲しいだろう⁠」ではなく、​自分が本当に​必要とするものから​作り始めます。</p></div><div class="vi"><b data-en="Craft every detail with care and beauty.">細部まで、​美しく作り込む。</b><p data-en="Looks, feel, and motion. We refine even the smallest parts.">見た目も、​触った感触も、​動きも。​細かなところまで​丁寧に整えます。</p></div><div class="vi"><b data-en="Blend smoothly into everyday life.">毎日に、​すっとなじむ。</b><p data-en="Apps you can use naturally, every day.">毎日、​自然に使える​アプリにします。</p></div></div></div>
+        <div class="vrow mis"><div class="vk" data-en="Mission">Mission</div><p class="mt"><span class="nbk" data-en="Days you can choose for yourself,">自分で選べる毎日を、</span><span class="nbk" data-en="we create.">作り出す。</span></p><p class="ms"><span class="ml" data-en="What will you spend your time on? What do you hold dear?"><span class="nbk">何に時間を使うのか、</span><span class="nbk">何を大切にするのか。</span></span><span class="ml" data-en="We support you in creating the days you choose."><span class="nbk">自分で選んだ</span><span class="nbk">毎日を作り出すことを</span><span class="nbk">支えます。</span></span></p></div>
+        <div class="vrow"><div class="vk" data-en="Vision">Vision</div><div class="vv"><div class="vi"><b data-en="Lots of memories.">たくさんの思い出を。</b><p data-en="We make things that become someone's memories."><span class="nbk">誰かの思い出になるものを、</span><span class="nbk">作ります。</span></p></div><div class="vi"><b data-en="Lots of moments.">たくさんのひとときを。</b><p data-en="We create irreplaceable moments."><span class="nbk">かけがえのない</span><span class="nbk">ひとときを、</span><span class="nbk">作ります。</span></p></div></div></div>
+        <div class="vrow"><div class="vk" data-en="Values">Values</div><div class="vv"><div class="vi"><b data-en="Build from your own real needs, not imagination."><span class="nbk">想像ではなく、</span><span class="nbk">自分の必要から作る。</span></b><p data-en="Not 'people would want this,' but what we truly need ourselves."><span class="nbk">「こんなものが欲しいだろう」ではなく、</span><span class="nbk">自分が本当に</span><span class="nbk">必要とするものから</span><span class="nbk">作り始めます。</span></p></div><div class="vi"><b data-en="Craft every detail with care and beauty."><span class="nbk">細部まで、</span><span class="nbk">美しく作り込む。</span></b><p data-en="Looks, feel, and motion. We refine even the smallest parts."><span class="nbk">見た目も、</span><span class="nbk">触った感触も、</span><span class="nbk">動きも。</span><span class="nbk">細かなところまで</span><span class="nbk">丁寧に整えます。</span></p></div><div class="vi"><b data-en="Blend smoothly into everyday life."><span class="nbk">毎日に、</span><span class="nbk">すっとなじむ。</span></b><p data-en="Apps you can use naturally, every day."><span class="nbk">毎日、</span><span class="nbk">自然に使える</span><span class="nbk">アプリにします。</span></p></div></div></div>
       </div>
     </div>
   </section>
@@ -799,12 +799,12 @@ window.scrollTo(0,0);
   };
   var q=function(s){return document.querySelector(s)};
   var ja={title:document.title,description:q('meta[name=description]').content,ogt:q('meta[property="og:title"]').content,ogd:q('meta[property="og:description"]').content};
-  var txt=[].slice.call(document.querySelectorAll('[data-en]')).map(function(e){return {e:e,ja:e.textContent,en:e.getAttribute('data-en')}});
+  var txt=[].slice.call(document.querySelectorAll('[data-en]')).map(function(e){return {e:e,ja:e.innerHTML,en:e.getAttribute('data-en')}});
   var aria=[].slice.call(document.querySelectorAll('[data-en-aria]')).map(function(e){return {e:e,ja:e.getAttribute('aria-label'),en:e.getAttribute('data-en-aria')}});
   var btn=document.getElementById('lang');
   function apply(l){
     var en=l==='en';
-    txt.forEach(function(o){o.e.textContent=en?o.en:o.ja});
+    txt.forEach(function(o){if(en)o.e.textContent=o.en;else o.e.innerHTML=o.ja});
     aria.forEach(function(o){o.e.setAttribute('aria-label',en?o.en:o.ja)});
     document.documentElement.lang=l;
     var s=en?M.en:ja;

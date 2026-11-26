@@ -52,7 +52,7 @@ h1,h2,h3,p{margin:0}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:10px}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.9);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transform:translateZ(0)}
 .nav{display:flex;align-items:center;gap:16px;height:68px}
 .brand{display:block;line-height:0}
 .logo{height:22px;width:auto;display:block}
@@ -177,7 +177,7 @@ h1,h2,h3,p{margin:0}
 .dev .gc.acc{background:#FF5E3A}
 .dev .gc .m{color:#1F2937;width:22px;height:22px}
 .dev .dim{position:absolute;inset:0;background:rgba(20,24,40,.38);z-index:19}
-.dev .sheet{position:absolute;left:0;right:0;bottom:0;height:410px;z-index:20;background:rgba(255,255,255,.96);border-radius:34px 34px 0 0;padding:10px 20px 0;transform:translateY(105%);transition:transform .65s var(--ease)}
+.dev .sheet{position:absolute;left:0;right:0;bottom:0;height:170px;z-index:20;background:rgba(255,255,255,.96);border-radius:34px 34px 0 0;padding:10px 20px 0;transform:translateY(105%);transition:transform .65s var(--ease)}
 .dev .sheet.on{transform:none}
 .dev .grab{width:36px;height:5px;border-radius:3px;background:rgba(60,60,67,.3);margin:0 auto 18px}
 .dev .fld{position:relative;display:flex;align-items:center;gap:8px;background:rgba(118,118,128,.12);border-radius:26px;padding:0 6px 0 18px;height:52px;font-size:17px;font-weight:600;color:#1F2937}
@@ -397,6 +397,35 @@ h1,h2,h3,p{margin:0}
 .dev .ban span{display:block;font-size:14px;line-height:18px;color:#3c3c43}
 .dev .sw{display:grid}
 .dev .sw>*{grid-area:1/1}
+
+/* ===== アプリ内の実画面（コードどおり） ===== */
+.dev .ial{position:absolute;left:50%;top:50%;width:270px;margin:-70px 0 0 -135px;z-index:25;border-radius:14px;overflow:hidden;background:rgba(242,242,247,.96);text-align:center}
+.dev .iat{padding:19px 16px 17px}
+.dev .iat b{display:block;font-size:17px;line-height:22px;font-weight:600;color:#000}
+.dev .iat p{margin:3px 0 0;font-size:13px;line-height:18px;color:#000}
+.dev .iok{height:44px;display:grid;place-items:center;border-top:.5px solid rgba(60,60,67,.29);font-size:17px;font-weight:600;color:#007AFF;transition:background-color .2s}
+.dev .iok.act{background:rgba(60,60,67,.12)}
+.dev .smod{position:absolute;left:50%;top:50%;width:338px;margin:-150px 0 0 -169px;z-index:25;padding:24px;border-radius:36px;background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.95);box-shadow:0 16px 40px rgba(0,0,0,.2);text-align:center}
+.dev .smt{font-size:22px;line-height:27px;font-weight:800;letter-spacing:-.3px;color:#1C1C1E;margin-bottom:6px}
+.dev .sms{font-size:14px;line-height:17px;color:#8E8E93;margin-bottom:20px}
+.dev .scd{display:flex;align-items:center;padding:12px;margin-bottom:10px;border-radius:22px;background:rgba(118,118,128,.08);text-align:left}
+.dev .sci{position:relative;flex:none;width:50px;height:50px;border-radius:13px;background:linear-gradient(145deg,#f43f5e,#fdba74)}
+.dev .sci::after{content:"";position:absolute;inset:15px;border-radius:50%;background:rgba(255,255,255,.88)}
+.dev .scn{flex:1;min-width:0;margin-left:12px}
+.dev .scn b{display:block;font-size:15.5px;line-height:20px;font-weight:700;color:#1C1C1E}
+.dev .scp{display:flex;align-items:center;margin-top:4px}
+.dev .scp s{font-size:13px;color:#8E8E93}
+.dev .scp i{font-style:normal;font-size:13px;color:#C7C7CC;margin:0 6px}
+.dev .scp em{font-style:normal;font-size:14px;font-weight:800;color:#FF3B30}
+.dev .scw{font-size:11px;line-height:14px;color:#8E8E93;margin-bottom:20px}
+.dev .sclose{position:relative;height:54px;display:grid;place-items:center;border-radius:999px;background:#007AFF;color:#fff;font-size:17px;font-weight:700;box-shadow:0 6px 14px rgba(0,122,255,.3);opacity:.55;overflow:hidden}
+.dev .sfill{position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(255,255,255,.35)}
+.dev .smod.on .sfill{width:100%;transition:width 1.5s linear;animation:sgone 0s linear 1.5s forwards}
+.dev .smod.on .sclose{animation:sready 0s linear 1.5s forwards}
+@keyframes sready{to{opacity:1}}
+@keyframes sgone{to{opacity:0}}
+.demo.off .pwrap{visibility:hidden}
+.demo.off *{animation-play-state:paused!important}
 /* ticker */
 .ticker{margin-top:72px;overflow:hidden;white-space:nowrap;background:var(--accent);color:#fff}
 .tk{display:inline-block;padding:15px 0;font-size:clamp(13px,1.8vw,17px);font-weight:700;letter-spacing:.16em;text-transform:uppercase;animation:tk 80s linear infinite}
@@ -487,8 +516,8 @@ footer{margin-top:96px;padding:0 0 44px}
 .foot .copy{font-size:12px;color:var(--sub);text-align:center}
 
 /* reveal */
-.js .reveal{opacity:0;transform:translateY(28px)}
-.js .reveal.in{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+.js .reveal{opacity:0;transform:translate3d(0,20px,0);will-change:opacity,transform}
+.js .reveal.in{opacity:1;transform:none;will-change:auto;transition:opacity .6s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0ms)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .reveal{opacity:1!important;transform:none!important}.cluster .ic{transform:rotate(var(--r))}}
 </style>
 <script>document.documentElement.classList.add('js');</script>
@@ -565,8 +594,7 @@ footer{margin-top:96px;padding:0 0 44px}
   <div class="dim fd" data-on="2-4"></div>
   <div class="sheet" data-on="2-4"><div class="grab"></div>
     <div class="fld"><span class="ph fd" data-on="2-3" data-en="Add a program">番組を追加</span><span class="ty" data-on="3-" style="--n:5;--td:.8s" data-en="Late-night radio">深夜ラジオ</span><span class="go"><svg class="i " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up2"/></svg></span></div>
-    <div class="kb"></div>
-  </div>
+    </div>
   <span class="tap" data-on="1-2" data-for="btn"></span><span class="tap" data-on="6-7" data-for="card1"></span>
 </div>
 <div class="scene sc1" data-name="WAN CHANCE">
@@ -632,15 +660,15 @@ footer{margin-top:96px;padding:0 0 44px}
   <div class="pg">
     <div class="thd"><div><svg class="dlogo" width="164.6" height="40.5" viewBox="0 -304.6 1549.1 380.8" style="display:block" aria-hidden="true"><path d="M173.8 -224.6V-180.8H114.2V0H59.5V-180.8H0V-224.6ZM184 -89.3Q184 -116.8 196.2 -137.8Q208.3 -158.7 229.4 -169.9Q250.6 -181.1 276.8 -181.1Q303 -181.1 324.2 -169.9Q345.3 -158.7 357.4 -137.8Q369.6 -116.8 369.6 -89.3Q369.6 -61.8 357.3 -40.8Q345 -19.8 323.7 -8.6Q302.4 2.6 276.2 2.6Q249.9 2.6 229 -8.6Q208 -19.8 196 -40.6Q184 -61.4 184 -89.3ZM313.9 -89.3Q313.9 -110.7 303.2 -122.2Q292.5 -133.8 276.8 -133.8Q260.8 -133.8 250.2 -122.4Q239.7 -111 239.7 -89.3Q239.7 -67.8 250.1 -56.3Q260.5 -44.8 276.2 -44.8Q291.8 -44.8 302.9 -56.3Q313.9 -67.8 313.9 -89.3ZM655.7 -112.3Q655.7 -79.4 641.1 -53.8Q626.6 -28.2 599.8 -14.1Q573.1 0 537.9 0H453.8V-224.6H537.9Q573.4 -224.6 600 -210.6Q626.6 -196.5 641.1 -171Q655.7 -145.6 655.7 -112.3ZM600 -112.3Q600 -143.4 582.7 -160.6Q565.4 -177.9 534.4 -177.9H508.5V-47.4H534.4Q565.4 -47.4 582.7 -64.3Q600 -81.3 600 -112.3ZM747.8 -181.1Q766.7 -181.1 781 -173.4Q795.2 -165.8 802.9 -153.3V-178.6H857.6V0H802.9V-25.3Q794.9 -12.8 780.6 -5.1Q766.4 2.6 747.5 2.6Q725.8 2.6 707.8 -8.8Q689.9 -20.2 679.5 -41.1Q669.1 -62.1 669.1 -89.6Q669.1 -117.1 679.5 -137.9Q689.9 -158.7 707.8 -169.9Q725.8 -181.1 747.8 -181.1ZM763.8 -133.4Q747.5 -133.4 736.2 -121.8Q724.8 -110.1 724.8 -89.6Q724.8 -69.1 736.2 -57.1Q747.5 -45.1 763.8 -45.1Q780.2 -45.1 791.5 -57Q802.9 -68.8 802.9 -89.3Q802.9 -109.8 791.5 -121.6Q780.2 -133.4 763.8 -133.4ZM1073.3 -178.6 961.3 84.8H902.4L943.4 -6.1L870.7 -178.6H931.8L973.1 -66.9L1014.1 -178.6ZM1350.1 -112.3Q1350.1 -79.4 1335.5 -53.8Q1321 -28.2 1294.2 -14.1Q1267.5 0 1232.3 0H1148.2V-224.6H1232.3Q1267.8 -224.6 1294.4 -210.6Q1321 -196.5 1335.5 -171Q1350.1 -145.6 1350.1 -112.3ZM1294.4 -112.3Q1294.4 -143.4 1277.1 -160.6Q1259.8 -177.9 1228.8 -177.9H1202.9V-47.4H1228.8Q1259.8 -47.4 1277.1 -64.3Q1294.4 -81.3 1294.4 -112.3ZM1363.5 -89.3Q1363.5 -116.8 1375.7 -137.8Q1387.8 -158.7 1409 -169.9Q1430.1 -181.1 1456.3 -181.1Q1482.6 -181.1 1503.7 -169.9Q1524.8 -158.7 1537 -137.8Q1549.1 -116.8 1549.1 -89.3Q1549.1 -61.8 1536.8 -40.8Q1524.5 -19.8 1503.2 -8.6Q1481.9 2.6 1455.7 2.6Q1429.4 2.6 1408.5 -8.6Q1387.5 -19.8 1375.5 -40.6Q1363.5 -61.4 1363.5 -89.3ZM1493.4 -89.3Q1493.4 -110.7 1482.7 -122.2Q1472 -133.8 1456.3 -133.8Q1440.3 -133.8 1429.8 -122.4Q1419.2 -111 1419.2 -89.3Q1419.2 -67.8 1429.6 -56.3Q1440 -44.8 1455.7 -44.8Q1471.4 -44.8 1482.4 -56.3Q1493.4 -67.8 1493.4 -89.3Z" fill="#1F2937"/></svg><div class="psub" data-en="Resets at 00:00">00:00 にリセット</div></div><span class="gc mb"><svg class="i m" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lmenu"/></svg></span></div>
     <div class="tlist">
-      <div class="tc x" data-on="2-11" style="top:0"><span class="ck" data-k="c1"><i class="xp" data-on="8-"><svg class="i " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg></i></span><b class="tt"><span class="tx" data-act="8-"><span class="ty" data-on="2-" style="--n:8;--td:.8s" data-en="Draft the proposal">企画書をまとめる</span></span></b></div>
-      <div class="tc x" data-on="4-11" style="top:66px"><span class="ck"><i class="xp" data-on="9-"><svg class="i " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg></i></span><b class="tt"><span class="tx" data-act="9-"><span class="ty" data-on="4-" style="--n:6;--td:.7s" data-en="Buy milk">牛乳を買う</span></span></b></div>
-      <div class="tc x" data-on="6-11" style="top:132px"><span class="ck"></span><b class="tt"><span class="ty" data-on="6-" style="--n:8;--td:.8s" data-en="Reply to emails">メールを返信する</span></b></div>
+      <div class="tc x" data-on="2-10" style="top:0"><span class="ck" data-k="c1"><i class="xp" data-on="8-"><svg class="i " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg></i></span><b class="tt"><span class="tx" data-act="8-"><span class="ty" data-on="2-" style="--n:8;--td:.8s" data-en="Draft the proposal">企画書をまとめる</span></span></b></div>
+      <div class="tc x" data-on="4-10" style="top:66px"><span class="ck"><i class="xp" data-on="9-"><svg class="i " viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg></i></span><b class="tt"><span class="tx" data-act="9-"><span class="ty" data-on="4-" style="--n:6;--td:.7s" data-en="Buy milk">牛乳を買う</span></span></b></div>
+      <div class="tc x" data-on="6-10" style="top:132px"><span class="ck"></span><b class="tt"><span class="ty" data-on="6-" style="--n:8;--td:.8s" data-en="Reply to emails">メールを返信する</span></b></div>
     </div>
-    <div class="zero x" data-on="12-" data-en="A fresh start, today.">まっさらな、今日。</div>
     <div class="abar" data-k="add"><svg class="i sb" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-plus"/></svg><span data-en="Add a task">タスクの追加</span></div>
   </div>
-  <div class="rst xp" data-on="10-12"><b>00:00</b><span data-en="Reset">リセット</span></div>
-  <span class="tap" data-on="1-2" data-for="add"></span><span class="tap" data-on="3-4" data-for="add"></span><span class="tap" data-on="5-6" data-for="add"></span><span class="tap" data-on="7-8" data-for="c1"></span>
+  <div class="dim fd" data-on="10-12" style="background:rgba(0,0,0,.4)"></div>
+  <div class="ial xp" data-on="10-12"><div class="iat"><b data-en="To Day Do">To Day Do</b><p data-en="A new day has begun.">新しい一日が始まりました。</p></div><div data-k="ok" class="iok pr" data-act="11-12" data-en="OK">OK</div></div>
+  <span class="tap" data-on="1-2" data-for="add"></span><span class="tap" data-on="3-4" data-for="add"></span><span class="tap" data-on="5-6" data-for="add"></span><span class="tap" data-on="7-8" data-for="c1"></span><span class="tap" data-on="11-12" data-for="ok"></span>
 </div>
 <div class="scene sc4" data-name="App Stocker">
   <div class="pg">
@@ -650,11 +678,12 @@ footer{margin-top:96px;padding:0 0 44px}
       <div class="sseg"><span class="a" data-en="All">すべて</span><span data-en="Free">無料</span><span data-en="Paid">有料</span></div></div>
     <div class="slist">
       <div class="grow" data-on="4-"><div class="ac"><span class="aic" style="background:linear-gradient(145deg,#2563eb,#67e8f9)"></span><div class="ai"><div class="at"><b data-en="Design Tools 3-Pack">デザインツール3本セット</b><div class="ag"><span data-en="Graphics &amp; Design">グラフィック/デザイン</span><i>•</i><em>¥1,200</em></div></div><span class="gt2" data-en="Get">入手</span></div></div></div>
-      <div class="ac"><span class="aic" style="background:linear-gradient(145deg,#f43f5e,#fdba74)"></span><div class="ai"><div class="at"><b data-en="Cat Collection Puzzle">ねこ集めパズル</b><div class="ag"><span data-en="Games">ゲーム</span><i>•</i><span class="swap" data-act="6-"><em class="a">¥320</em><em class="b">¥160</em></span></div></div><span class="gt2" data-en="Get">入手</span></div></div>
+      <div class="ac"><span class="aic" style="background:linear-gradient(145deg,#f43f5e,#fdba74)"></span><div class="ai"><div class="at"><b data-en="Cat Collection Puzzle">ねこ集めパズル</b><div class="ag"><span data-en="Games">ゲーム</span><i>•</i><span class="swap" data-act="5-"><em class="a">¥320</em><em class="b">¥160</em></span></div></div><span class="gt2" data-en="Get">入手</span></div></div>
       <div class="ac"><span class="aic" style="background:linear-gradient(145deg,#059669,#6ee7b7)"></span><div class="ai"><div class="at"><b data-en="Pocket Budget - Easy daily expense tracking">ポケット家計簿 - 毎日の支出をかんたん管理</b><div class="ag"><span data-en="Finance">ファイナンス</span><i>•</i><em data-en="Free">無料</em></div></div><span class="gt2" data-en="Get">入手</span></div></div>
     </div>
   </div>
-  <div class="ban" data-on="5-7"><span class="bi ic4"></span><div><div class="bh"><b>App Stocker</b><small data-en="now">今</small></div><span data-en="Cat Collection Puzzle dropped from ¥320 to ¥160">「ねこ集めパズル」が ¥320 → ¥160 に値下がりしました</span></div></div>
+  <div class="dim fd" data-on="6-7" style="background:rgba(0,0,0,.35)"></div>
+  <div class="smod xp" data-on="6-7"><div class="smt" data-en="Price drop alert">値下げ通知</div><div class="sms" data-en="Apps you saved are now cheaper.">保存したアプリがお得になりました。</div><div class="scd"><span class="sci"></span><div class="scn"><b data-en="Cat Collection Puzzle">ねこ集めパズル</b><div class="scp"><s>¥320</s><i>→</i><em>¥160</em></div></div></div><div class="scw" data-en="* Always check the App Store page for accurate information.">※正確な情報は必ずApp Storeのページでご確認ください。</div><div class="sclose"><span class="sfill"></span><span data-en="Close">閉じる</span></div></div>
   <span class="tap" data-on="1-2" data-for="in"></span><span class="tap" data-on="3-4" data-for="go"></span>
 </div>
           <div class="hbar"></div>
@@ -745,10 +774,10 @@ footer{margin-top:96px;padding:0 0 44px}
       </div>
       
       <p class="about-sub reveal" data-en="Mlots is an app brand built by a developer whose day job is game design, drawing on the know-how and skills of game development.">Mlots は、ゲームデザインを本職とする開発者が、ゲーム開発のノウハウやスキルを活かして手がけるアプリブランドです。</p>
-      <div class="vals reveal">
-        <div class="vrow mis"><div class="vk" data-en="Mission">Mission</div><p class="mt"><span class="nbk" data-en="Days you can choose for yourself,">自分で選べる毎日を、</span><span class="nbk" data-en="we create.">作り出す。</span></p><p class="ms"><span class="ml" data-en="What will you spend your time on? What do you hold dear?">何に時間を使うのか、何を大切にするのか。</span><span class="ml" data-en="We support you in creating the days you choose.">自分で選んだ毎日を作り出すことを支えます。</span></p></div>
-        <div class="vrow"><div class="vk" data-en="Vision">Vision</div><div class="vv"><div class="vi"><b data-en="Lots of memories.">たくさんの思い出を。</b><p data-en="We make things that become someone's memories.">誰かの思い出になるものを、作ります。</p></div><div class="vi"><b data-en="Lots of moments.">たくさんのひとときを。</b><p data-en="We create irreplaceable moments.">かけがえのないひとときを、作ります。</p></div></div></div>
-        <div class="vrow"><div class="vk" data-en="Values">Values</div><div class="vv"><div class="vi"><b data-en="Build from your own real needs, not imagination.">想像ではなく、自分の必要から作る。</b><p data-en="Not 'people would want this,' but what we truly need ourselves.">「こんなものが欲しいだろう」ではなく、自分が本当に必要とするものから作り始めます。</p></div><div class="vi"><b data-en="Craft every detail with care and beauty.">細部まで、美しく作り込む。</b><p data-en="Looks, feel, and motion. We refine even the smallest parts.">見た目も、触った感触も、動きも。細かなところまで丁寧に整えます。</p></div><div class="vi"><b data-en="Blend smoothly into everyday life.">毎日に、すっとなじむ。</b><p data-en="Apps you can use naturally, every day.">毎日、自然に使えるアプリにします。</p></div></div></div>
+      <div class="vals">
+        <div class="vrow mis reveal"><div class="vk" data-en="Mission">Mission</div><p class="mt"><span class="nbk" data-en="Days you can choose for yourself,">自分で選べる毎日を、</span><span class="nbk" data-en="we create.">作り出す。</span></p><p class="ms"><span class="ml" data-en="What will you spend your time on? What do you hold dear?">何に時間を使うのか、何を大切にするのか。</span><span class="ml" data-en="We support you in creating the days you choose.">自分で選んだ毎日を作り出すことを支えます。</span></p></div>
+        <div class="vrow reveal"><div class="vk" data-en="Vision">Vision</div><div class="vv"><div class="vi"><b data-en="Lots of memories.">たくさんの思い出を。</b><p data-en="We make things that become someone's memories.">誰かの思い出になるものを、作ります。</p></div><div class="vi"><b data-en="Lots of moments.">たくさんのひとときを。</b><p data-en="We create irreplaceable moments.">かけがえのないひとときを、作ります。</p></div></div></div>
+        <div class="vrow reveal"><div class="vk" data-en="Values">Values</div><div class="vv"><div class="vi"><b data-en="Build from your own real needs, not imagination.">想像ではなく、自分の必要から作る。</b><p data-en="Not 'people would want this,' but what we truly need ourselves.">「こんなものが欲しいだろう」ではなく、自分が本当に必要とするものから作り始めます。</p></div><div class="vi"><b data-en="Craft every detail with care and beauty.">細部まで、美しく作り込む。</b><p data-en="Looks, feel, and motion. We refine even the smallest parts.">見た目も、触った感触も、動きも。細かなところまで丁寧に整えます。</p></div><div class="vi"><b data-en="Blend smoothly into everyday life.">毎日に、すっとなじむ。</b><p data-en="Apps you can use naturally, every day.">毎日、自然に使えるアプリにします。</p></div></div></div>
       </div>
     </div>
   </section>
@@ -782,7 +811,7 @@ window.scrollTo(0,0);
   else{
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
       if(e.isIntersecting){if(loaded)e.target.style.setProperty('--d','0ms');e.target.classList.add('in');io.unobserve(e.target)}
-    })},{threshold:.12});
+    })},{threshold:0,rootMargin:'0px 0px -8% 0px'});
     items.forEach(function(c){io.observe(c)});
   }
 })();
@@ -935,7 +964,7 @@ window.scrollTo(0,0);
     if(!run)clear();
   }
   if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){visible=es[0].isIntersecting;sync();},{threshold:.2}).observe(demo);
+    new IntersectionObserver(function(es){visible=es[0].isIntersecting;demo.classList.toggle('off',!visible);sync();},{threshold:.2}).observe(demo);
   }
   document.addEventListener('visibilitychange',sync);
 
